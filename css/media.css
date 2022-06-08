@@ -1,0 +1,172 @@
+:root {
+  --clr-desBlue: #006699;
+  --clr-Blue: #00A0dc;
+  --clr-Gray500: #313335;
+  --clr-Gray450: #545557;
+  --clr-Gray400: #86888a;
+  --clr-Gray300: #caccce;
+
+  --fnt--placeholder: 100;
+  --fnt-default: 400;
+  --fnt-btnH: 500;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input {
+  all: unset;
+  font-size: 0.75rem;
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-weight: var(--fnt-btnH);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: var(--fnt-btnH);
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: var(--fnt-btnH);
+}
+
+body {
+  background: var(--clr-Gray500);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--clr-Gray400);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.5rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.newTask {
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  background: var(--clr-Gray300);
+  color: var(--clr-Gray400);
+  width: 100%;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+}
+
+#inputTask {
+  flex-grow: 2;
+  color: var(--clr-Gray500);
+  font-weight: var(--fnt-default);
+}
+
+#submitTask {
+  font-weight: 700;
+  color: var(--clr-desBlue);
+  background: linear-gradient(to right, var(--clr-desBlue), var(--clr-Blue) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#submitTask:hover {
+  opacity: 0.7;
+}
+
+#submitTask:active {
+  opacity: 0.5;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1.5rem;
+  padding: 0.25rem 0.75rem;
+  align-items: center;
+  background: var(--clr-Gray450);
+  color: var(--clr-Gray300);
+  height: fit-content;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  flex: 1 1 0%;
+  padding: 0.325rem 0.625rem;
+  background: var(--clr-Gray400);
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.taskContent {
+  flex-grow: 2;
+}
+
+.text {
+  color: rgb(107, 219, 185);
+  width: 100%;
+  font-weight: 500;
+}
+
+.text:not(:read-only) {
+  color: var(--clr-Gray300);
+}
+
+.taskActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit {
+  color: var(--clr-desBlue);
+  font-weight: 700;
+  background: linear-gradient(to right, #22aeff, rgb(126, 255, 216));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit:hover {
+  opacity: 0.7;
+}
+
+.edit:active {
+  opacity: 0.5;
+}
+
+.delete {
+  font-weight: 700;
+}
+
+.delete:hover {
+  color: crimson;
+}
+
+.delete:active {
+  color: rgb(168, 28, 56);
+}
